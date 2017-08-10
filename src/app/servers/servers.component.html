@@ -11,4 +11,4 @@
 <ng-template #noserver> <!-- local reference! -->
     <p>No server was created!</p>
 </ng-template>
-<app-server *ngFor="let server of servers"></app-server>
+<app-server *ngFor="let server of servers, let i = index"></app-server>
