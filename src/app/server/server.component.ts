@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {MyServer} from "../my-server";
 
 @Component({
     selector: 'app-server',
@@ -6,7 +7,7 @@ import {Component, Input} from '@angular/core';
     styleUrls: ['./server.component.css']
 })
 export class ServerComponent {
-    @Input("server") element: {serverId: number, serverStatus: string, serverName: string};
+    @Input("server") element: MyServer;
 
     constructor() {
     }
