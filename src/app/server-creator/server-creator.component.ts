@@ -33,8 +33,9 @@ export class ServerCreatorComponent implements OnInit {
         });
     }
 
-    // onUpdateServerName($event: Event) {
-    //     let value = (<HTMLInputElement>$event.target).value;
-    //     this.serverName = value;
-    // }
+    onUpdateServerName($event: Event) {
+         //let value = (<HTMLInputElement>$event.target).value;
+         //this.serverName = value;
+        this.isServerCreated = false;
+    }
 }
