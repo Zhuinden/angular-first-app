@@ -7,7 +7,11 @@ import {MyServer} from "../my-server";
     styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-    servers: MyServer[] = [{serverId: 5, serverStatus: 'online', serverName: 'Boop'}, {
+    servers: MyServer[] = [{
+        serverId: 5,
+        serverStatus: 'online',
+        serverName: 'Boop'
+    }, {
         serverId: 11,
         serverStatus: 'offline',
         serverName: 'Beep'
