@@ -1,1 +1,3 @@
-<ng-content></ng-content> <!-- moved to servers-component for demo's sake -->
+<p [ngClass]="{online: element.serverStatus === 'online', offline: element.serverStatus === 'offline'}">
+  Server with ID {{element.serverId}} and name {{element.serverName}} is {{element.serverStatus}}
+</p>

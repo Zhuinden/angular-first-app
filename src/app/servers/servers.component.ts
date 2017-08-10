@@ -1,26 +1,26 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MyServer} from "../my-server";
 
 @Component({
-    selector: 'app-servers',
-    templateUrl: './servers.component.html',
-    styleUrls: ['./servers.component.css']
+  selector: 'app-servers',
+  templateUrl: './servers.component.html',
+  styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-    servers: MyServer[] = [{
-        serverId: 5,
-        serverStatus: 'online',
-        serverName: 'Boop'
-    }, {
-        serverId: 11,
-        serverStatus: 'offline',
-        serverName: 'Beep'
-    }];
+  servers: MyServer[] = [{
+    serverId: 5,
+    serverStatus: 'online',
+    serverName: 'Boop'
+  }, {
+    serverId: 11,
+    serverStatus: 'offline',
+    serverName: 'Beep'
+  }];
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 
-    onServerCreated(event: MyServer) {
-        this.servers.push(event);
-    }
+  onServerCreated(event: MyServer) {
+    this.servers.push(event);
+  }
 }

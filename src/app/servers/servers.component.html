@@ -1,6 +1,2 @@
 <app-server-creator (serverCreated)="onServerCreated($event)"></app-server-creator> <!-- wtf? -->
-<app-server *ngFor="let server of servers, let i = index" [server]="server">
-  <p [ngClass]="{online: server.serverStatus === 'online', offline: server.serverStatus === 'offline'}">
-    Server with ID {{server.serverId}} and name {{server.serverName}} is {{server.serverStatus}}
-  </p>
-</app-server>
+<app-server *ngFor="let server of servers, let i = index" [server]="server"></app-server>
