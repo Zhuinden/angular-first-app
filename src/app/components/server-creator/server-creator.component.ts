@@ -6,7 +6,6 @@ import {LoggingService} from "../../services/logging.service";
     selector: 'app-server-creator',
     templateUrl: './server-creator.component.html',
     styleUrls: ['./server-creator.component.css'],
-    providers: [LoggingService]
 })
 export class ServerCreatorComponent implements OnInit {
     @Output() serverCreated = new EventEmitter<MyServer>();

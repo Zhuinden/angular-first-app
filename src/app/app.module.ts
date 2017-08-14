@@ -9,6 +9,7 @@ import {ServerCreatorComponent} from './components/server-creator/server-creator
 import {HighlightDirective} from "./directives/highlight.directive";
 import {UnlessDirective} from "./directives/unless.directive";
 import {DropdownDirective} from "./directives/dropdown.directive";
+import {LoggingService} from "./services/logging.service";
 
 @NgModule({
     declarations: [
@@ -24,7 +25,7 @@ import {DropdownDirective} from "./directives/dropdown.directive";
         BrowserModule,
         FormsModule
     ],
-    providers: [],
+    providers: [LoggingService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
