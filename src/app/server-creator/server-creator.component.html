@@ -8,8 +8,16 @@
         (click)="onCreateServer()">
     Add Server
 </button>
-<!-- <p>{{serverCreationStatus}}</p> -->
-<p *ngIf="isServerCreated; else noserver">Server was created, server name is {{serverName}}</p>
-<ng-template #noserver> <!-- local reference! -->
-    <p highlight [defaultColor]="'yellow'" [highlightColor]="'palevioletred'">No server was created!</p>
+<!-- *ngIf is the following:
+<ng-template [ngIf="isServerCreated"]>
+    // ...
 </ng-template>
+-->
+<p *ngIf="isServerCreated" style="background-color: turquoise">Server was created, server name is {{serverName}}</p>
+<div *unless="isServerCreated"><p highlight [defaultColor]="'yellow'" [highlightColor]="'palevioletred'">No server was
+    created!</p></div>
+
+<!--<p *ngIf="isServerCreated; else noserver">Server was created, server name is {{serverName}}</p>-->
+<!--<ng-template #noserver> &lt;!&ndash; local reference! &ndash;&gt;-->
+<!--<p highlight [defaultColor]="'yellow'" [highlightColor]="'palevioletred'">No server was created!</p>-->
+<!--</ng-template>-->
