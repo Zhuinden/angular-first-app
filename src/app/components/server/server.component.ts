@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {MyServer} from "../my-server";
+import {MyServer} from "../../my-server";
 
 @Component({
   selector: 'app-server',

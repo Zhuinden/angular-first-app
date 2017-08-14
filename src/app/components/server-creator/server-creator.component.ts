@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {MyServer} from "../my-server";
-import {LoggingService} from "../services/logging.service";
+import {MyServer} from "../../my-server";
+import {LoggingService} from "../../services/logging.service";
 
 @Component({
     selector: 'app-server-creator',
