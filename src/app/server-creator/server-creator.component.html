@@ -11,5 +11,5 @@
 <!-- <p>{{serverCreationStatus}}</p> -->
 <p *ngIf="isServerCreated; else noserver">Server was created, server name is {{serverName}}</p>
 <ng-template #noserver> <!-- local reference! -->
-    <p>No server was created!</p>
+    <p highlight>No server was created!</p>
 </ng-template>

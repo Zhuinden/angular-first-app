@@ -4,15 +4,17 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {ServerComponent} from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
-import { ServerCreatorComponent } from './server-creator/server-creator.component';
+import {ServersComponent} from './servers/servers.component';
+import {ServerCreatorComponent} from './server-creator/server-creator.component';
+import {HighlightDirective} from "./directives/highlight.directive";
 
 @NgModule({
     declarations: [
         AppComponent,
         ServerComponent,
         ServersComponent,
-        ServerCreatorComponent
+        ServerCreatorComponent,
+        HighlightDirective
     ],
     imports: [
         BrowserModule,
