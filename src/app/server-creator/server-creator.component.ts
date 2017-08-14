@@ -1,10 +1,12 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {MyServer} from "../my-server";
+import {LoggingService} from "../services/logging.service";
 
 @Component({
     selector: 'app-server-creator',
     templateUrl: './server-creator.component.html',
-    styleUrls: ['./server-creator.component.css']
+    styleUrls: ['./server-creator.component.css'],
+    providers: [LoggingService]
 })
 export class ServerCreatorComponent implements OnInit {
     @Output() serverCreated = new EventEmitter<MyServer>();
@@ -14,7 +16,7 @@ export class ServerCreatorComponent implements OnInit {
     isServerCreated = false;
     serverName = '';
 
-    constructor() {
+    constructor(private loggingService: LoggingService) {
         setTimeout(() => {
             this.allowNewServer = true;
         }, 2000);
@@ -31,6 +33,7 @@ export class ServerCreatorComponent implements OnInit {
             serverStatus: 'online',
             serverName: this.serverName
         });
+        this.loggingService.logStatusChange('online');
     }
 
     onUpdateServerName($event: Event) {
