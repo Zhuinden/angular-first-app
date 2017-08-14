@@ -8,6 +8,7 @@ import {ServersComponent} from './servers/servers.component';
 import {ServerCreatorComponent} from './server-creator/server-creator.component';
 import {HighlightDirective} from "./directives/highlight.directive";
 import {UnlessDirective} from "./directives/unless.directive";
+import {DropdownDirective} from "./directives/dropdown.directive";
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import {UnlessDirective} from "./directives/unless.directive";
         ServersComponent,
         ServerCreatorComponent,
         HighlightDirective,
-        UnlessDirective
+        UnlessDirective,
+        DropdownDirective
     ],
     imports: [
         BrowserModule,
